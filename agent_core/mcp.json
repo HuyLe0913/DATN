@@ -1,0 +1,9 @@
+{
+  "servers": [
+    {
+      "name": "backend",
+      "url": "http://localhost:8002/sse",
+      "type": "sse"
+    }
+  ]
+}

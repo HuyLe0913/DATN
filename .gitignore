@@ -205,3 +205,17 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Temp files
+temp_*.pdf
+
+# Reference
+references/
+
+# Project Data
+data/
+agent_core/agent_workspace/
+
+# IDE
+.gemini/
+

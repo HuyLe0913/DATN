@@ -1,0 +1,10 @@
+# Exclude unnecessary files from Docker build context
+**/*.pdf
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/__pycache__
+.git
+.env
+.ipynb_checkpoints
+venv/

@@ -1,0 +1,248 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --save 60 1 --loglevel warning --appendonly yes
+    networks:
+      - datn-network
+
+  minio:
+    image: minio/minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    command: server /data --console-address ":9001"
+    volumes:
+      - minio_data:/data
+    networks:
+      - datn-network
+
+  createbuckets:
+    image: minio/mc
+    depends_on:
+      - minio
+    entrypoint: >
+      /bin/sh -c "
+      /usr/bin/mc alias set myminio http://minio:9000 minioadmin minioadmin;
+      /usr/bin/mc mb myminio/pdfs;
+      /usr/bin/mc mb myminio/markdowns;
+      exit 0;
+      "
+    networks:
+      - datn-network
+
+  weaviate:
+    image: semitechnologies/weaviate:1.27.0
+    ports:
+      - "8080:8080"
+      - "50051:50051"
+    environment:
+      QUERY_DEFAULTS_LIMIT: 25
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
+      PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
+      DEFAULT_VECTORIZER_MODULE: 'none'
+      ENABLE_MODULES: ''
+      CLUSTER_HOSTNAME: 'node1'
+    volumes:
+      - weaviate_data:/var/lib/weaviate
+    networks:
+      - datn-network
+
+  postgres-db:
+    image: postgres:15
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: ews_rag
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U user -d ews_rag"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - datn-network
+
+  neo4j:
+    image: neo4j:5.12-community
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      - NEO4J_AUTH=neo4j/password
+      - NEO4J_PLUGINS=["apoc"]
+      - NEO4J_dbms_security_procedures_unrestricted=apoc.*
+      - NEO4J_dbms_security_procedures_allowlist=apoc.*
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+    healthcheck:
+      test: ["CMD-SHELL", "wget --quiet --tries=1 --spider http://localhost:7474 || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 15
+      start_period: 60s
+    networks:
+      - datn-network
+
+  app:
+    build: .
+    ports:
+      - "8001:8000"
+    environment:
+      - POSTGRES_URL=postgresql://user:password@postgres-db:5432/ews_rag
+      - WEAVIATE_URL=http://weaviate:8080
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      - EMBEDDING_MODEL=${EMBEDDING_MODEL}
+      - GRAPH_EXTRACTOR_MODEL=${GRAPH_EXTRACTOR_MODEL}
+      - MISTRAL_API_KEY=${MISTRAL_API_KEY}
+      - MINIO_ENDPOINT=minio:9000
+      - MINIO_ACCESS_KEY=minioadmin
+      - MINIO_SECRET_KEY=minioadmin
+    depends_on:
+      weaviate:
+        condition: service_started
+      postgres-db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+      minio:
+        condition: service_started
+      neo4j:
+        condition: service_healthy
+    volumes:
+      - .:/app
+      - ./data/processed:/data
+    networks:
+      - datn-network
+
+  ingestion-worker:
+    build: .
+    command: celery -A backend.celery worker --loglevel=info -c 15
+    environment:
+      - POSTGRES_URL=postgresql://user:password@postgres-db:5432/ews_rag
+      - WEAVIATE_URL=http://weaviate:8080
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      - EMBEDDING_MODEL=${EMBEDDING_MODEL}
+      - GRAPH_EXTRACTOR_MODEL=${GRAPH_EXTRACTOR_MODEL}
+      - MISTRAL_API_KEY=${MISTRAL_API_KEY}
+      - MINIO_ENDPOINT=minio:9000
+      - MINIO_ACCESS_KEY=minioadmin
+      - MINIO_SECRET_KEY=minioadmin
+      - PYTHONPATH=/app
+      - NEO4J_URL=bolt://neo4j:7687
+      - NEO4J_USER=neo4j
+      - NEO4J_PASSWORD=password
+    depends_on:
+      weaviate:
+        condition: service_started
+      postgres-db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+      minio:
+        condition: service_started
+      neo4j:
+        condition: service_healthy
+    volumes:
+      - .:/app
+      - ./data/processed:/data
+    networks:
+      - datn-network
+
+  graph-worker:
+    build: .
+    command: celery -A backend.celery worker --loglevel=info -Q graph-queue -c 5
+    environment:
+      - POSTGRES_URL=postgresql://user:password@postgres-db:5432/ews_rag
+      - WEAVIATE_URL=http://weaviate:8080
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      - EMBEDDING_MODEL=${EMBEDDING_MODEL}
+      - GRAPH_EXTRACTOR_MODEL=${GRAPH_EXTRACTOR_MODEL}
+      - MISTRAL_API_KEY=${MISTRAL_API_KEY}
+      - MINIO_ENDPOINT=minio:9000
+      - MINIO_ACCESS_KEY=minioadmin
+      - MINIO_SECRET_KEY=minioadmin
+      - PYTHONPATH=/app
+      - NEO4J_URL=bolt://neo4j:7687
+      - NEO4J_USER=neo4j
+      - NEO4J_PASSWORD=password
+    depends_on:
+      weaviate:
+        condition: service_started
+      postgres-db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+      minio:
+        condition: service_started
+      neo4j:
+        condition: service_healthy
+    networks:
+      - datn-network
+
+  ocr-worker:
+    build: .
+    command: celery -A backend.celery worker --loglevel=info -Q ocr-queue
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - MISTRAL_API_KEY=${MISTRAL_API_KEY}
+      - MINIO_ENDPOINT=minio:9000
+      - MINIO_ACCESS_KEY=minioadmin
+      - MINIO_SECRET_KEY=minioadmin
+      - PYTHONPATH=/app
+      - POSTGRES_URL=postgresql://user:password@postgres-db:5432/ews_rag
+      - WEAVIATE_URL=http://weaviate:8080
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      - EMBEDDING_MODEL=${EMBEDDING_MODEL}
+      - MODEL_NAME=${MODEL_NAME}
+    depends_on:
+      - redis
+      - minio
+    networks:
+      - datn-network
+    volumes:
+      - ./backend:/app/backend
+      - /tmp/ocr_cache:/tmp/ocr_cache
+
+  mcp-server:
+    build: .
+    command: python backend/mcp_server.py
+    ports:
+      - "8002:8000"
+    environment:
+      - BACKEND_API_URL=http://app:8000
+      - FASTMCP_HOST=0.0.0.0
+      - FASTMCP_PORT=8000
+    depends_on:
+      - app
+    volumes:
+      - .:/app
+    networks:
+      - datn-network
+
+networks:
+  datn-network:
+    driver: bridge
+
+volumes:
+  weaviate_data:
+  postgres_data:
+  minio_data:
+  neo4j_data:
+  neo4j_logs:
+  redis_data:
