@@ -26,4 +26,4 @@ EXPOSE 8000
 ENV PYTHONPATH=/app
 
 # Run the application using uvicorn directly
-CMD ["uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "mcp_backend.main:app", "--host", "0.0.0.0", "--port", "8000"]

@@ -1,0 +1,9 @@
+tool_permissions:
+  enabled: true
+  allowlist:
+    - mcp_backend_search_financial_reports_ask_vector_post
+    # - mcp_backend_query_knowledge_graph_ask_graph_post
+    - python_interpreter
+    - full_financial_report
+    - internal_validator
+  denylist: []

@@ -8,8 +8,9 @@ from fastmcp import Client
 logger = logging.getLogger(__name__)
 
 class MCPIntegrator:
-    def __init__(self, tool_manager):
+    def __init__(self, tool_manager, policy_manager=None):
         self.tool_manager = tool_manager
+        self.policy_manager = policy_manager
         self.clients: Dict[str, Client] = {}
 
     async def load_config(self, config_path: str):
@@ -47,9 +48,13 @@ class MCPIntegrator:
             
             self.clients[name] = client
             tools = await client.list_tools()
-            
             for tool in tools:
                 tool_name = f"mcp_{name}_{tool.name}"
+                
+                # Check policy if available
+                if self.policy_manager and not self.policy_manager.is_tool_allowed(tool_name):
+                    logger.info(f"MCP Tool '{tool_name}' is restricted by policy.")
+                    continue
                 
                 def make_handler(c, tn):
                     async def h(**kwargs):

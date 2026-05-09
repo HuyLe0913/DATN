@@ -5,6 +5,7 @@ class AgentRequest(BaseModel):
     request_id: Optional[str] = None
     session_id: Optional[str] = "default"
     user_request: str
+    history: Optional[List[Dict[str, str]]] = None
     context: Optional[Dict[str, Any]] = None
 
 class AgentResponse(BaseModel):

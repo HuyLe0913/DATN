@@ -1,4 +1,4 @@
-version: '3.8'
+
 
 services:
   redis:
@@ -130,7 +130,7 @@ services:
 
   ingestion-worker:
     build: .
-    command: celery -A backend.celery worker --loglevel=info -c 15
+    command: celery -A mcp_backend.celery worker --loglevel=info -c 15
     environment:
       - POSTGRES_URL=postgresql://user:password@postgres-db:5432/ews_rag
       - WEAVIATE_URL=http://weaviate:8080
@@ -165,7 +165,7 @@ services:
 
   graph-worker:
     build: .
-    command: celery -A backend.celery worker --loglevel=info -Q graph-queue -c 5
+    command: celery -A mcp_backend.celery worker --loglevel=info -Q graph-queue -c 5
     environment:
       - POSTGRES_URL=postgresql://user:password@postgres-db:5432/ews_rag
       - WEAVIATE_URL=http://weaviate:8080
@@ -197,7 +197,7 @@ services:
 
   ocr-worker:
     build: .
-    command: celery -A backend.celery worker --loglevel=info -Q ocr-queue
+    command: celery -A mcp_backend.celery worker --loglevel=info -Q ocr-queue
     environment:
       - CELERY_BROKER_URL=redis://redis:6379/0
       - MISTRAL_API_KEY=${MISTRAL_API_KEY}
@@ -219,21 +219,58 @@ services:
       - ./backend:/app/backend
       - /tmp/ocr_cache:/tmp/ocr_cache
 
-  mcp-server:
-    build: .
-    command: python backend/mcp_server.py
+  agent-core:
+    build: 
+      context: ./agent_core
     ports:
-      - "8002:8000"
+      - "8002:8002"
     environment:
-      - BACKEND_API_URL=http://app:8000
-      - FASTMCP_HOST=0.0.0.0
-      - FASTMCP_PORT=8000
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      - AGENT_MODEL_NAME=${AGENT_MODEL_NAME}
+      - LLMGATE_BASE_URL=${LLMGATE_BASE_URL}
+      - LLMGATE_API_KEY=${LLMGATE_API_KEY}
+      - PYTHONPATH=/app
     depends_on:
       - app
     volumes:
-      - .:/app
+      - ./agent_core:/app
     networks:
       - datn-network
+
+  app-backend:
+    build:
+      context: ./app_backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://user:password@postgres-db:5432/ews_rag
+      - AGENT_URL=http://agent-core:8002/api/chat
+    depends_on:
+      postgres-db:
+        condition: service_healthy
+      agent-core:
+        condition: service_started
+    volumes:
+      - ./app_backend:/app
+    networks:
+      - datn-network
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://app-backend:8000
+    depends_on:
+      - app-backend
+    command: npm run dev
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    networks:
+      - datn-network
+
 
 networks:
   datn-network:

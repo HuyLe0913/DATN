@@ -2,7 +2,7 @@
   "servers": [
     {
       "name": "backend",
-      "url": "http://localhost:8002/sse",
+      "url": "http://app:8000/mcp",
       "type": "sse"
     }
   ]
