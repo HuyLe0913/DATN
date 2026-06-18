@@ -1,0 +1,802 @@
+[
+  {
+    "id": 1,
+    "query": "Tính tăng trưởng doanh thu thuần của doanh nghiệp HPG trong năm 2024 so với năm 2023.",
+    "symbol": "HPG",
+    "year": 2024,
+    "gold_keywords": ["doanh thu", "bán hàng", "hpg", "tăng trưởng"],
+    "ground_truth": "Doanh thu thuần của HPG năm 2024 đạt khoảng 142.709 tỷ VND, tăng trưởng 20,35% so với năm 2023 (~118.579 tỷ VND)."
+  },
+  {
+    "id": 2,
+    "query": "Tại sao lợi nhuận sau thuế của HPG trong năm 2024 lại thay đổi so với năm 2023?",
+    "symbol": "HPG",
+    "year": 2024,
+    "gold_keywords": ["lợi nhuận sau thuế", "nguyên nhân", "giá vốn", "chi phí tài chính", "thép"],
+    "ground_truth": "Lợi nhuận sau thuế HPG năm 2024 tăng mạnh đạt hơn 13.000 tỷ VND nhờ nhu cầu thép phục hồi, quản lý giá vốn quặng sắt và than cốc tốt hơn cùng với việc tối ưu hóa chi phí tài chính."
+  },
+  {
+    "id": 3,
+    "query": "Tổng giá trị tài sản dở dang dài hạn của dự án Khu liên hợp gang thép Dung Quất 2 tại cuối năm 2024 của HPG là bao nhiêu?",
+    "symbol": "HPG",
+    "year": 2024,
+    "gold_keywords": ["dung quất", "dở dang", "tài sản cố định", "xây dựng cơ bản"],
+    "ground_truth": "Chi phí xây dựng cơ bản dở dang của dự án Dung Quất 2 tại cuối năm 2024 đạt hơn 42.000 tỷ VND, phản ánh tiến độ xây dựng tích cực của dự án."
+  },
+  {
+    "id": 4,
+    "query": "Giá trị hàng tồn kho của Tập đoàn Hòa Phát tại ngày 31/12/2024 là bao nhiêu?",
+    "symbol": "HPG",
+    "year": 2024,
+    "gold_keywords": ["hàng tồn kho", "dự phòng", "giá trị", "hòa phát"],
+    "ground_truth": "Hàng tồn kho của HPG tại cuối năm 2024 đạt khoảng 34.200 tỷ VND, với dự phòng giảm giá hàng tồn kho được trích lập đầy đủ theo quy định."
+  },
+  {
+    "id": 5,
+    "query": "Tổng nợ phải trả của HPG tại thời điểm cuối năm 2024 chiếm bao nhiêu phần trăm tổng nguồn vốn?",
+    "symbol": "HPG",
+    "year": 2024,
+    "gold_keywords": ["nợ phải trả", "nguồn vốn", "tỷ lệ", "hòa phát"],
+    "ground_truth": "Nợ phải trả của HPG tại cuối năm 2024 chiếm khoảng 45% tổng nguồn vốn, cơ cấu tài chính vẫn duy trì ở mức an toàn."
+  },
+  {
+    "id": 6,
+    "query": "Chi phí tài chính, đặc biệt là chi phí lãi vay của HPG năm 2024 thay đổi như thế nào?",
+    "symbol": "HPG",
+    "year": 2024,
+    "gold_keywords": ["chi phí tài chính", "lãi vay", "chênh lệch tỷ giá", "hpg"],
+    "ground_truth": "Chi phí tài chính của HPG năm 2024 giảm nhẹ nhờ lãi suất vay giảm và lỗ chênh lệch tỷ giá được kiểm soát tốt hơn so với năm 2023."
+  },
+  {
+    "id": 7,
+    "query": "Dòng tiền thuần từ hoạt động kinh doanh của HPG trong năm 2024 là bao nhiêu?",
+    "symbol": "HPG",
+    "year": 2024,
+    "gold_keywords": ["dòng tiền", "hoạt động kinh doanh", "lưu chuyển tiền tệ"],
+    "ground_truth": "Dòng tiền từ hoạt động kinh doanh năm 2024 của HPG thặng dư dương mạnh mẽ đạt hơn 18.000 tỷ VND nhờ hoạt động bán hàng và thu hồi công nợ tốt."
+  },
+  {
+    "id": 8,
+    "query": "Hệ số thanh toán hiện hành của HPG tại cuối năm 2024 là bao nhiêu?",
+    "symbol": "HPG",
+    "year": 2024,
+    "gold_keywords": ["hệ số thanh toán", "thanh toán hiện hành", "tài sản ngắn hạn", "nợ ngắn hạn"],
+    "ground_truth": "Hệ số thanh toán hiện hành của HPG tại cuối năm 2024 đạt khoảng 1,2 lần, đảm bảo khả năng thanh toán các nghĩa vụ ngắn hạn."
+  },
+  {
+    "id": 9,
+    "query": "Vốn điều lệ của HPG tính đến ngày 31/12/2024 đạt bao nhiêu tỷ đồng?",
+    "symbol": "HPG",
+    "year": 2024,
+    "gold_keywords": ["vốn điều lệ", "vốn cổ phần", "chủ sở hữu"],
+    "ground_truth": "Vốn điều lệ của HPG tính đến ngày 31/12/2024 đạt 63.960 tỷ VND sau các đợt phát hành cổ phiếu tăng vốn từ nguồn vốn chủ sở hữu."
+  },
+  {
+    "id": 10,
+    "query": "Công ty nào thực hiện kiểm toán báo cáo tài chính năm 2024 của HPG?",
+    "symbol": "HPG",
+    "year": 2024,
+    "gold_keywords": ["kiểm toán", "kpmg", "ý kiến kiểm toán", "độc lập"],
+    "ground_truth": "Công ty TNHH KPMG Việt Nam là đơn vị thực hiện kiểm toán báo cáo tài chính năm 2024 của HPG và đưa ra ý kiến kiểm toán chấp nhận toàn phần."
+  },
+  {
+    "id": 11,
+    "query": "Doanh thu tài chính của HPG năm 2024 chủ yếu đến từ nguồn nào?",
+    "symbol": "HPG",
+    "year": 2024,
+    "gold_keywords": ["doanh thu tài chính", "lãi tiền gửi", "lãi tỷ giá"],
+    "ground_truth": "Doanh thu tài chính năm 2024 của HPG đạt hơn 2.500 tỷ VND, chủ yếu đến từ lãi tiền gửi ngân hàng và lãi chênh lệch tỷ giá đã thực hiện."
+  },
+  {
+    "id": 12,
+    "query": "Tổng số lượng nhân viên của Tập đoàn Hòa Phát tính đến cuối năm 2024 là bao nhiêu?",
+    "symbol": "HPG",
+    "year": 2024,
+    "gold_keywords": ["nhân sự", "lao động", "nhân viên", "số lượng"],
+    "ground_truth": "Tổng số lao động làm việc tại Tập đoàn Hòa Phát tính đến cuối năm 2024 là khoảng hơn 30.000 người."
+  },
+  {
+    "id": 13,
+    "query": "Lợi nhuận sau thuế chưa phân phối của HPG tại ngày 31/12/2024 là bao nhiêu?",
+    "symbol": "HPG",
+    "year": 2024,
+    "gold_keywords": ["lợi nhuận chưa phân phối", "vốn chủ sở hữu", "thặng dư"],
+    "ground_truth": "Lợi nhuận sau thuế chưa phân phối của HPG cuối năm 2024 đạt hơn 40.000 tỷ VND, tạo nguồn lực lớn cho việc tái đầu tư và chia cổ tức."
+  },
+  {
+    "id": 14,
+    "query": "Hệ số nợ vay trên vốn chủ sở hữu (D/E) của HPG cuối năm 2024 là bao nhiêu?",
+    "symbol": "HPG",
+    "year": 2024,
+    "gold_keywords": ["hệ số nợ", "nợ vay", "vốn chủ sở hữu", "đòn bẩy"],
+    "ground_truth": "Hệ số nợ vay trên vốn chủ sở hữu của HPG tại cuối năm 2024 được duy trì ở mức an toàn khoảng 0,55 lần."
+  },
+  {
+    "id": 15,
+    "query": "Doanh thu bán thành phẩm thép đóng góp bao nhiêu phần trăm vào tổng doanh thu HPG năm 2024?",
+    "symbol": "HPG",
+    "year": 2024,
+    "gold_keywords": ["mảng thép", "doanh thu thép", "thành phẩm", "tỷ trọng"],
+    "ground_truth": "Mảng kinh doanh thép (thép xây dựng, HRC, ống thép, tôn mạ) tiếp tục đóng vai trò chủ đạo, đóng góp trên 90% tổng doanh thu và lợi nhuận của toàn tập đoàn."
+  },
+  {
+    "id": 16,
+    "query": "Doanh thu thuần của HPG năm 2023 đạt bao nhiêu tỷ đồng và giảm bao nhiêu so với năm trước?",
+    "symbol": "HPG",
+    "year": 2023,
+    "gold_keywords": ["doanh thu thuần", "2023", "giảm", "hpg"],
+    "ground_truth": "Doanh thu thuần năm 2023 của HPG đạt 118.579 tỷ VND, giảm khoảng 16% so với năm 2022 do giá thép giảm và thị trường bất động sản đóng băng."
+  },
+  {
+    "id": 17,
+    "query": "Lợi nhuận sau thuế của Tập đoàn Hòa Phát năm 2023 là bao nhiêu?",
+    "symbol": "HPG",
+    "year": 2023,
+    "gold_keywords": ["lợi nhuận sau thuế", "2023", "hpg", "kết quả"],
+    "ground_truth": "Lợi nhuận sau thuế của HPG năm 2023 đạt 6.800 tỷ VND, hoàn thành vượt kế hoạch năm đề ra dù gặp nhiều khó khăn trong nửa đầu năm."
+  },
+  {
+    "id": 18,
+    "query": "Tổng tài sản của HPG tính đến ngày 31/12/2023 là bao nhiêu?",
+    "symbol": "HPG",
+    "year": 2023,
+    "gold_keywords": ["tổng tài sản", "2023", "cuối năm", "hpg"],
+    "ground_truth": "Tổng tài sản của HPG tại cuối năm 2023 đạt khoảng 187.783 tỷ VND, giảm nhẹ so với cuối năm 2022."
+  },
+  {
+    "id": 19,
+    "query": "Số dư tiền mặt và tiền gửi ngân hàng ngắn hạn của HPG cuối năm 2023 là bao nhiêu?",
+    "symbol": "HPG",
+    "year": 2023,
+    "gold_keywords": ["tiền mặt", "tiền gửi", "ngắn hạn", "số dư", "2023"],
+    "ground_truth": "Tại ngày 31/12/2023, số dư tiền và tương đương tiền cộng tiền gửi ngân hàng của HPG là hơn 34.000 tỷ VND, giúp tập đoàn có lượng thanh khoản dồi dào."
+  },
+  {
+    "id": 20,
+    "query": "Giá trị hàng tồn kho của HPG cuối năm 2023 là bao nhiêu?",
+    "symbol": "HPG",
+    "year": 2023,
+    "gold_keywords": ["hàng tồn kho", "2023", "giá trị", "cuối năm"],
+    "ground_truth": "Hàng tồn kho của HPG tại ngày 31/12/2023 đạt khoảng 26.300 tỷ VND, giảm đáng kể so với đầu năm nhờ chiến lược tối ưu hóa vòng quay kho."
+  },
+  {
+    "id": 21,
+    "query": "Chi phí xây dựng cơ bản dở dang của HPG cuối năm 2023 tập trung chủ yếu vào dự án nào?",
+    "symbol": "HPG",
+    "year": 2023,
+    "gold_keywords": ["dự án", "dở dang", "xây dựng cơ bản", "dung quất"],
+    "ground_truth": "Dự án Khu liên hợp sản xuất gang thép Hòa Phát Dung Quất 2 là dự án trọng điểm chiếm phần lớn chi phí dở dang dài hạn của HPG trong năm 2023."
+  },
+  {
+    "id": 22,
+    "query": "Tổng nợ vay ngân hàng (ngắn hạn và dài hạn) của HPG tại ngày 31/12/2023 là bao nhiêu?",
+    "symbol": "HPG",
+    "year": 2023,
+    "gold_keywords": ["nợ vay", "ngân hàng", "ngắn hạn", "dài hạn", "2023"],
+    "ground_truth": "Tổng nợ vay ngắn hạn và dài hạn của HPG tại cuối năm 2023 đạt khoảng 65.400 tỷ VND, tăng nhẹ để tài trợ cho dự án Dung Quất 2."
+  },
+  {
+    "id": 23,
+    "query": "Biên lợi nhuận gộp của HPG trong năm 2023 đạt bao nhiêu %?",
+    "symbol": "HPG",
+    "year": 2023,
+    "gold_keywords": ["biên lợi nhuận gộp", "gộp", "tỷ lệ", "2023"],
+    "ground_truth": "Biên lợi nhuận gộp cả năm 2023 của HPG đạt khoảng 9,7%, hồi phục rõ rệt qua từng quý so với năm trước đó."
+  },
+  {
+    "id": 24,
+    "query": "Lợi nhuận thuần từ hoạt động kinh doanh của HPG trong năm 2023 là bao nhiêu?",
+    "symbol": "HPG",
+    "year": 2023,
+    "gold_keywords": ["lợi nhuận thuần", "kinh doanh", "hoạt động"],
+    "ground_truth": "Lợi nhuận thuần từ hoạt động kinh doanh của HPG năm 2023 đạt khoảng 7.500 tỷ VND."
+  },
+  {
+    "id": 25,
+    "query": "Khoản phải thu ngắn hạn của khách hàng tại HPG cuối năm 2023 là bao nhiêu?",
+    "symbol": "HPG",
+    "year": 2023,
+    "gold_keywords": ["phải thu ngắn hạn", "khách hàng", "số dư", "2023"],
+    "ground_truth": "Khoản phải thu ngắn hạn của khách hàng tại HPG cuối năm 2023 duy trì ở mức thấp, khoảng hơn 6.000 tỷ VND nhờ chính sách bán hàng chặt chẽ."
+  },
+  {
+    "id": 26,
+    "query": "Tỷ lệ nợ xấu (NPL) của ngân hàng ACB tại thời điểm cuối năm 2024 là bao nhiêu?",
+    "symbol": "ACB",
+    "year": 2024,
+    "gold_keywords": ["nợ xấu", "nợ nhóm 3", "nợ nhóm 4", "nợ nhóm 5", "tỷ lệ nợ xấu", "NPL"],
+    "ground_truth": "Tỷ lệ nợ xấu (NPL) của ACB tại cuối năm 2024 được kiểm soát tốt quanh mức 1,21% tổng dư nợ cho vay."
+  },
+  {
+    "id": 27,
+    "query": "Lợi nhuận trước thuế của ACB trong năm 2024 là bao nhiêu?",
+    "symbol": "ACB",
+    "year": 2024,
+    "gold_keywords": ["lợi nhuận trước thuế", "2024", "acb", "kết quả"],
+    "ground_truth": "Lợi nhuận trước thuế của ACB năm 2024 đạt hơn 22.000 tỷ VND, tiếp tục tăng trưởng ổn định nhờ tăng trưởng tín dụng và tối ưu chi phí."
+  },
+  {
+    "id": 28,
+    "query": "Thu nhập lãi thuần của ACB năm 2024 tăng trưởng thế nào so với năm 2023?",
+    "symbol": "ACB",
+    "year": 2024,
+    "gold_keywords": ["thu nhập lãi thuần", "tăng trưởng", "thu nhập lãi", "2024"],
+    "ground_truth": "Thu nhập lãi thuần của ACB năm 2024 đạt hơn 27.000 tỷ VND, tăng khoảng 11% so với năm 2023 nhờ mở rộng quy mô tín dụng."
+  },
+  {
+    "id": 29,
+    "query": "Tỷ lệ tiền gửi không kỳ hạn (CASA) của ACB tại ngày 31/12/2024 đạt bao nhiêu %?",
+    "symbol": "ACB",
+    "year": 2024,
+    "gold_keywords": ["casa", "không kỳ hạn", "tiền gửi", "tỷ lệ"],
+    "ground_truth": "Tỷ lệ CASA của ACB tại ngày 31/12/2024 đạt khoảng 22%, giữ vững vị thế thuộc nhóm ngân hàng có tỷ lệ CASA tốt trong hệ thống."
+  },
+  {
+    "id": 30,
+    "query": "Tổng dư nợ cho vay khách hàng của ACB tại cuối năm 2024 đạt bao nhiêu tỷ đồng?",
+    "symbol": "ACB",
+    "year": 2024,
+    "gold_keywords": ["cho vay khách hàng", "cho vay", "dư nợ", "acb", "2024"],
+    "ground_truth": "Dư nợ cho vay khách hàng của ACB tại cuối năm 2024 đạt khoảng 555.000 tỷ VND, tăng trưởng tín dụng khoảng 16% so với đầu năm."
+  },
+  {
+    "id": 31,
+    "query": "Tổng tiền gửi của khách hàng tại ACB cuối năm 2024 là bao nhiêu?",
+    "symbol": "ACB",
+    "year": 2024,
+    "gold_keywords": ["tiền gửi", "khách hàng", "huy động", "2024"],
+    "ground_truth": "Tổng số tiền gửi của khách hàng tại ACB cuối năm 2024 đạt khoảng 480.000 tỷ VND, tăng trưởng tốt đáp ứng nhu cầu thanh khoản."
+  },
+  {
+    "id": 32,
+    "query": "Hệ số an toàn vốn (CAR) theo chuẩn Basel II của ACB đạt bao nhiêu % tại ngày 31/12/2024?",
+    "symbol": "ACB",
+    "year": 2024,
+    "gold_keywords": ["car", "an toàn vốn", "basel ii", "acb"],
+    "ground_truth": "Hệ số an toàn vốn (CAR) theo Basel II của ACB tại cuối năm 2024 duy trì ở mức cao trên 12%, vượt xa mức tối thiểu 8% của Ngân hàng Nhà nước."
+  },
+  {
+    "id": 33,
+    "query": "Chi phí dự phòng rủi ro tín dụng của ACB trong năm 2024 thay đổi như thế nào?",
+    "symbol": "ACB",
+    "year": 2024,
+    "gold_keywords": ["dự phòng", "rủi ro tín dụng", "trích lập", "chi phí dự phòng"],
+    "ground_truth": "Chi phí dự phòng rủi ro tín dụng của ACB năm 2024 tăng nhẹ nhằm gia tăng bộ đệm dự phòng trong bối cảnh nền kinh tế còn tiềm ẩn nhiều rủi ro."
+  },
+  {
+    "id": 34,
+    "query": "Chỉ số CIR (tỷ lệ chi phí trên thu nhập) của ACB năm 2024 đạt mức nào?",
+    "symbol": "ACB",
+    "year": 2024,
+    "gold_keywords": ["cir", "chi phí", "thu nhập", "tỷ lệ chi phí trên thu nhập"],
+    "ground_truth": "Chỉ số CIR của ACB năm 2024 được kiểm soát chặt chẽ quanh mức 33% nhờ số hóa quy trình và quản lý chi phí vận hành hiệu quả."
+  },
+  {
+    "id": 35,
+    "query": "Lợi nhuận sau thuế của ACB năm 2024 là bao nhiêu?",
+    "symbol": "ACB",
+    "year": 2024,
+    "gold_keywords": ["lợi nhuận sau thuế", "2024", "acb", "sau thuế"],
+    "ground_truth": "Lợi nhuận sau thuế năm 2024 của ACB đạt khoảng 17.600 tỷ VND, mang lại tỷ suất sinh lời vượt trội cho cổ đông."
+  },
+  {
+    "id": 36,
+    "query": "Thu nhập từ hoạt động dịch vụ của ACB năm 2024 đóng góp bao nhiêu phần trăm vào tổng thu nhập?",
+    "symbol": "ACB",
+    "year": 2024,
+    "gold_keywords": ["hoạt động dịch vụ", "dịch vụ", "đóng góp", "thu nhập dịch vụ"],
+    "ground_truth": "Thu nhập từ hoạt động dịch vụ của ACB năm 2024 đóng góp khoảng 10% vào tổng thu nhập hoạt động của ngân hàng."
+  },
+  {
+    "id": 37,
+    "query": "Số dư nợ có khả năng mất vốn (nợ nhóm 5) của ACB cuối năm 2024 là bao nhiêu?",
+    "symbol": "ACB",
+    "year": 2024,
+    "gold_keywords": ["nợ nhóm 5", "mất vốn", "nợ xấu", "acb"],
+    "ground_truth": "Nợ nhóm 5 của ACB cuối năm 2024 vào khoảng hơn 3.200 tỷ VND, chiếm tỷ trọng kiểm soát trong giới hạn cho phép."
+  },
+  {
+    "id": 38,
+    "query": "Tổng tài sản của ACB tính đến cuối năm 2024 đạt bao nhiêu tỷ đồng?",
+    "symbol": "ACB",
+    "year": 2024,
+    "gold_keywords": ["tổng tài sản", "2024", "acb", "tài sản"],
+    "ground_truth": "Tổng tài sản của ACB tính đến cuối năm 2024 đạt hơn 720.000 tỷ VND, tăng khoảng 11% so với thời điểm đầu năm."
+  },
+  {
+    "id": 39,
+    "query": "Tỷ suất sinh lời ROE của ngân hàng ACB năm 2024 đạt bao nhiêu %?",
+    "symbol": "ACB",
+    "year": 2024,
+    "gold_keywords": ["roe", "tỷ suất sinh lời", "vốn chủ sở hữu", "acb"],
+    "ground_truth": "Tỷ suất sinh lời trên vốn chủ sở hữu (ROE) của ACB năm 2024 duy trì ở mức ấn tượng trên 22%, thuộc hàng top trong ngành ngân hàng."
+  },
+  {
+    "id": 40,
+    "query": "Đơn vị thực hiện kiểm toán báo cáo tài chính năm 2024 của ACB là công ty nào?",
+    "symbol": "ACB",
+    "year": 2024,
+    "gold_keywords": ["kiểm toán", "acb", "pwc", "đơn vị kiểm toán"],
+    "ground_truth": "Công ty TNHH PricewaterhouseCoopers (PwC) Việt Nam là đơn vị kiểm toán báo cáo tài chính năm 2024 của ACB."
+  },
+  {
+    "id": 41,
+    "query": "Lợi nhuận trước thuế của ACB trong năm 2023 đạt bao nhiêu tỷ đồng?",
+    "symbol": "ACB",
+    "year": 2023,
+    "gold_keywords": ["lợi nhuận trước thuế", "2023", "acb", "kết quả 2023"],
+    "ground_truth": "Lợi nhuận trước thuế của ACB năm 2023 đạt 20.068 tỷ VND, hoàn thành 100% kế hoạch đại hội đồng cổ đông giao."
+  },
+  {
+    "id": 42,
+    "query": "Tỷ lệ nợ xấu (NPL) của ACB tại cuối năm 2023 là bao nhiêu %?",
+    "symbol": "ACB",
+    "year": 2023,
+    "gold_keywords": ["nợ xấu", "NPL", "2023", "tỷ lệ"],
+    "ground_truth": "Tỷ lệ nợ xấu (NPL) của ACB tại ngày 31/12/2023 ở mức 1,22%, thuộc nhóm ngân hàng có tỷ lệ nợ xấu thấp nhất hệ thống."
+  },
+  {
+    "id": 43,
+    "query": "Tổng dư nợ cho vay khách hàng của ACB tại cuối năm 2023 là bao nhiêu?",
+    "symbol": "ACB",
+    "year": 2023,
+    "gold_keywords": ["cho vay khách hàng", "cho vay", "dư nợ", "2023"],
+    "ground_truth": "Cho vay khách hàng của ACB tại cuối năm 2023 đạt 487.600 tỷ VND, tăng trưởng 17,9% so với cuối năm 2022."
+  },
+  {
+    "id": 44,
+    "query": "Số dư tiền gửi khách hàng tại ACB cuối năm 2023 đạt bao nhiêu tỷ đồng?",
+    "symbol": "ACB",
+    "year": 2023,
+    "gold_keywords": ["tiền gửi", "khách hàng", "huy động", "2023"],
+    "ground_truth": "Tiền gửi khách hàng tại ACB cuối năm 2023 đạt 447.600 tỷ VND, tăng trưởng 12,5% so với đầu năm."
+  },
+  {
+    "id": 45,
+    "query": "Thu nhập lãi thuần của ACB năm 2023 là bao nhiêu?",
+    "symbol": "ACB",
+    "year": 2023,
+    "gold_keywords": ["thu nhập lãi thuần", "2023", "lãi thuần", "acb"],
+    "ground_truth": "Thu nhập lãi thuần của ACB năm 2023 đạt 24.960 tỷ VND, tăng trưởng gần 13% nhờ tối ưu cơ cấu tài sản sinh lời."
+  },
+  {
+    "id": 46,
+    "query": "Tổng tài sản của ACB cuối năm 2023 là bao nhiêu?",
+    "symbol": "ACB",
+    "year": 2023,
+    "gold_keywords": ["tổng tài sản", "2023", "cuối năm", "acb"],
+    "ground_truth": "Tổng tài sản của ACB tính đến ngày 31/12/2023 đạt 647.000 tỷ VND, tăng 11% so với đầu năm."
+  },
+  {
+    "id": 47,
+    "query": "Chi phí trích lập dự phòng rủi ro tín dụng của ACB trong năm 2023 là bao nhiêu?",
+    "symbol": "ACB",
+    "year": 2023,
+    "gold_keywords": ["chi phí dự phòng", "dự phòng", "rủi ro tín dụng", "2023"],
+    "ground_truth": "Chi phí trích lập dự phòng rủi ro tín dụng của ACB năm 2023 là khoảng 1.800 tỷ VND."
+  },
+  {
+    "id": 48,
+    "query": "Tỷ suất sinh lời ROE của ACB năm 2023 đạt mức bao nhiêu %?",
+    "symbol": "ACB",
+    "year": 2023,
+    "gold_keywords": ["roe", "roe 2023", "sinh lời", "vốn chủ sở hữu"],
+    "ground_truth": "Tỷ suất sinh lời trên vốn chủ sở hữu (ROE) của ACB năm 2023 tiếp tục duy trì vị thế dẫn đầu ngành ở mức 24,8%."
+  },
+  {
+    "id": 49,
+    "query": "Số lượng chi nhánh, phòng giao dịch của ACB trên toàn quốc tính đến cuối năm 2023 là bao nhiêu?",
+    "symbol": "ACB",
+    "year": 2023,
+    "gold_keywords": ["mạng lưới", "chi nhánh", "phòng giao dịch", "acb"],
+    "ground_truth": "Mạng lưới của ACB tính đến cuối năm 2023 gồm 384 chi nhánh và phòng giao dịch trên cả nước."
+  },
+  {
+    "id": 50,
+    "query": "Lãi thuần từ hoạt động kinh doanh ngoại hối của ACB năm 2023 là bao nhiêu?",
+    "symbol": "ACB",
+    "year": 2023,
+    "gold_keywords": ["ngoại hối", "kinh doanh ngoại hối", "lãi thuần ngoại hối", "2023"],
+    "ground_truth": "Lãi thuần từ hoạt động kinh doanh ngoại hối của ACB năm 2023 đạt hơn 1.000 tỷ VND, tăng trưởng mạnh nhờ các sản phẩm phái sinh tỷ giá."
+  },
+  {
+    "id": 51,
+    "query": "Tổng thu nhập hoạt động (TOI) của ngân hàng Vietcombank (VCB) năm 2024 đạt bao nhiêu?",
+    "symbol": "VCB",
+    "year": 2024,
+    "gold_keywords": ["TOI", "thu nhập hoạt động", "tổng thu nhập", "vcb"],
+    "ground_truth": "Tổng thu nhập hoạt động (TOI) của VCB năm 2024 đạt hơn 68.000 tỷ VND, dẫn đầu hệ thống ngân hàng thương mại Việt Nam."
+  },
+  {
+    "id": 52,
+    "query": "Lợi nhuận trước thuế hợp nhất của VCB năm 2024 đạt con số kỷ lục bao nhiêu tỷ đồng?",
+    "symbol": "VCB",
+    "year": 2024,
+    "gold_keywords": ["lợi nhuận trước thuế", "2024", "kỷ lục", "vietcombank"],
+    "ground_truth": "Lợi nhuận trước thuế hợp nhất của VCB năm 2024 đạt hơn 42.000 tỷ VND, ghi nhận mức lợi nhuận cao nhất toàn ngành ngân hàng."
+  },
+  {
+    "id": 53,
+    "query": "Tỷ lệ nợ xấu (NPL) của VCB tại thời điểm cuối năm 2024 là bao nhiêu %?",
+    "symbol": "VCB",
+    "year": 2024,
+    "gold_keywords": ["nợ xấu", "NPL", "tỷ lệ nợ xấu", "cuối năm 2024", "vcb"],
+    "ground_truth": "Tỷ lệ nợ xấu (NPL) của VCB cuối năm 2024 được kiểm soát chặt chẽ quanh mức 0,98% tổng dư nợ."
+  },
+  {
+    "id": 54,
+    "query": "Tỷ lệ bao phủ nợ xấu (LLR) của VCB cuối năm 2024 đạt bao nhiêu %?",
+    "symbol": "VCB",
+    "year": 2024,
+    "gold_keywords": ["bao phủ nợ xấu", "LLR", "dự phòng nợ xấu", "tỷ lệ bao phủ"],
+    "ground_truth": "Tỷ lệ bao phủ nợ xấu (LLR) của VCB cuối năm 2024 duy trì ở mức vượt trội trên 220%, đứng đầu hệ thống."
+  },
+  {
+    "id": 55,
+    "query": "Dư nợ cho vay khách hàng của VCB tính đến ngày 31/12/2024 là bao nhiêu?",
+    "symbol": "VCB",
+    "year": 2024,
+    "gold_keywords": ["cho vay khách hàng", "cho vay", "dư nợ", "vcb", "2024"],
+    "ground_truth": "Dư nợ cho vay khách hàng của VCB tính đến cuối năm 2024 đạt khoảng 1,35 triệu tỷ VND, tăng trưởng tín dụng khoảng 12%."
+  },
+  {
+    "id": 56,
+    "query": "Số dư tiền gửi của khách hàng tại VCB cuối năm 2024 đạt bao nhiêu tỷ đồng?",
+    "symbol": "VCB",
+    "year": 2024,
+    "gold_keywords": ["tiền gửi", "huy động", "khách hàng", "vietcombank", "2024"],
+    "ground_truth": "Tổng số tiền gửi của khách hàng tại VCB cuối năm 2024 đạt khoảng 1,42 triệu tỷ VND, tiếp tục là ngân hàng huy động vốn dân cư lớn hàng đầu."
+  },
+  {
+    "id": 57,
+    "query": "Lợi nhuận sau thuế của VCB năm 2024 đạt bao nhiêu tỷ đồng?",
+    "symbol": "VCB",
+    "year": 2024,
+    "gold_keywords": ["lợi nhuận sau thuế", "vcb", "2024", "kết quả"],
+    "ground_truth": "Lợi nhuận sau thuế của VCB năm 2024 đạt hơn 33.600 tỷ VND sau khi khấu trừ thuế thu nhập doanh nghiệp."
+  },
+  {
+    "id": 58,
+    "query": "Tỷ lệ tiền gửi không kỳ hạn (CASA) của VCB cuối năm 2024 đạt bao nhiêu %?",
+    "symbol": "VCB",
+    "year": 2024,
+    "gold_keywords": ["casa", "không kỳ hạn", "tỷ lệ casa", "vcb", "2024"],
+    "ground_truth": "Tỷ lệ CASA của VCB cuối năm 2024 đạt khoảng 31%, tăng nhẹ so với năm ngoái nhờ dịch vụ số hóa giao dịch thu hút dòng tiền."
+  },
+  {
+    "id": 59,
+    "query": "Thu nhập lãi thuần của VCB năm 2024 thay đổi thế nào so với năm 2023?",
+    "symbol": "VCB",
+    "year": 2024,
+    "gold_keywords": ["thu nhập lãi thuần", "nii", "lãi thuần", "so sánh", "2024"],
+    "ground_truth": "Thu nhập lãi thuần của VCB năm 2024 đạt hơn 53.000 tỷ VND, duy trì đà tăng trưởng khoảng 8% so với năm 2023."
+  },
+  {
+    "id": 60,
+    "query": "Chi phí trích lập dự phòng rủi ro tín dụng của VCB trong năm 2024 là bao nhiêu?",
+    "symbol": "VCB",
+    "year": 2024,
+    "gold_keywords": ["dự phòng", "rủi ro tín dụng", "trích lập", "vcb", "2024"],
+    "ground_truth": "Chi phí dự phòng rủi ro tín dụng năm 2024 của VCB đạt khoảng 6.000 tỷ VND, giảm nhẹ do danh mục tài sản được cơ cấu tốt hơn."
+  },
+  {
+    "id": 61,
+    "query": "Tổng tài sản của VCB tại ngày 31/12/2024 đạt bao nhiêu tỷ đồng?",
+    "symbol": "VCB",
+    "year": 2024,
+    "gold_keywords": ["tổng tài sản", "2024", "vcb", "quy mô tài sản"],
+    "ground_truth": "Tổng tài sản của VCB tính đến ngày 31/12/2024 đạt hơn 1,9 triệu tỷ VND, tăng khoảng 8% so với đầu năm."
+  },
+  {
+    "id": 62,
+    "query": "Chỉ số CIR (tỷ lệ chi phí trên thu nhập) của VCB năm 2024 đạt bao nhiêu %?",
+    "symbol": "VCB",
+    "year": 2024,
+    "gold_keywords": ["cir", "tỷ lệ chi phí", "vận hành", "vcb"],
+    "ground_truth": "Chỉ số CIR của VCB năm 2024 đạt mức tối ưu khoảng 30,5%, phản ánh năng lực tối ưu hóa chi phí vận hành hàng đầu."
+  },
+  {
+    "id": 63,
+    "query": "Vốn chủ sở hữu của VCB cuối năm 2024 đạt bao nhiêu tỷ đồng?",
+    "symbol": "VCB",
+    "year": 2024,
+    "gold_keywords": ["vốn chủ sở hữu", "equity", "vietcombank", "2024"],
+    "ground_truth": "Vốn chủ sở hữu của VCB tại cuối năm 2024 đạt hơn 185.000 tỷ VND, bổ sung bộ đệm an toàn vốn vững chắc."
+  },
+  {
+    "id": 64,
+    "query": "Tỷ suất sinh lời ROE và ROA của VCB năm 2024 lần lượt đạt bao nhiêu %?",
+    "symbol": "VCB",
+    "year": 2024,
+    "gold_keywords": ["roe", "roa", "tỷ suất sinh lời", "vcb", "2024"],
+    "ground_truth": "Năm 2024, ROE của VCB đạt khoảng 21,5% and ROA đạt khoảng 1,85%, tiếp tục là ngân hàng hoạt động hiệu quả bậc nhất."
+  },
+  {
+    "id": 65,
+    "query": "Đơn vị kiểm toán độc lập nào thực hiện kiểm toán báo cáo tài chính năm 2024 cho VCB?",
+    "symbol": "VCB",
+    "year": 2024,
+    "gold_keywords": ["kiểm toán", "ey", "đơn vị kiểm toán", "vcb"],
+    "ground_truth": "Công ty TNHH Ernst & Young (EY) Việt Nam thực hiện kiểm toán báo cáo tài chính năm 2024 của VCB."
+  },
+  {
+    "id": 66,
+    "query": "Lợi nhuận trước thuế hợp nhất của VCB năm 2023 là bao nhiêu tỷ đồng?",
+    "symbol": "VCB",
+    "year": 2023,
+    "gold_keywords": ["lợi nhuận trước thuế", "2023", "vcb", "kết quả"],
+    "ground_truth": "Lợi nhuận trước thuế hợp nhất năm 2023 của VCB đạt 41.244 tỷ VND, tăng trưởng 10,2% so với năm 2022."
+  },
+  {
+    "id": 67,
+    "query": "Tỷ lệ nợ xấu (NPL) của VCB cuối năm 2023 ở mức bao nhiêu %?",
+    "symbol": "VCB",
+    "year": 2023,
+    "gold_keywords": ["nợ xấu", "NPL", "2023", "vietcombank"],
+    "ground_truth": "Tỷ lệ nợ xấu (NPL) của VCB tính đến ngày 31/12/2023 là 0,98%, duy trì dưới mức mục tiêu 1,5% đề ra."
+  },
+  {
+    "id": 68,
+    "query": "Tổng dư nợ cho vay khách hàng của VCB cuối năm 2023 là bao nhiêu?",
+    "symbol": "VCB",
+    "year": 2023,
+    "gold_keywords": ["cho vay khách hàng", "cho vay", "dư nợ", "2023"],
+    "ground_truth": "Tổng dư nợ cho vay khách hàng của VCB tại cuối năm 2023 là 1,27 triệu tỷ VND, tăng 10,9% so với cuối năm 2022."
+  },
+  {
+    "id": 69,
+    "query": "Số dư tiền gửi khách hàng tại VCB cuối năm 2023 đạt bao nhiêu tỷ đồng?",
+    "symbol": "VCB",
+    "year": 2023,
+    "gold_keywords": ["tiền gửi", "khách hàng", "huy động", "2023"],
+    "ground_truth": "Huy động tiền gửi từ khách hàng tại VCB tính đến ngày 31/12/2023 đạt 1,39 triệu tỷ VND, tăng 12,1% so với cuối năm 2022."
+  },
+  {
+    "id": 70,
+    "query": "Thu nhập lãi thuần của VCB năm 2023 đạt bao nhiêu tỷ đồng?",
+    "symbol": "VCB",
+    "year": 2023,
+    "gold_keywords": ["thu nhập lãi thuần", "2023", "lãi thuần", "vietcombank"],
+    "ground_truth": "Thu nhập lãi thuần của VCB năm 2023 đạt 48.200 tỷ VND, tăng trưởng nhẹ nhờ nỗ lực tối ưu hóa cấu trúc lãi suất."
+  },
+  {
+    "id": 71,
+    "query": "Tổng tài sản của VCB cuối năm 2023 đạt bao nhiêu tỷ đồng?",
+    "symbol": "VCB",
+    "year": 2023,
+    "gold_keywords": ["tổng tài sản", "2023", "vcb", "cuối năm"],
+    "ground_truth": "Tổng tài sản của VCB tại cuối năm 2023 đạt 1,84 triệu tỷ VND, tăng trưởng 7% so với đầu năm."
+  },
+  {
+    "id": 72,
+    "query": "Chi phí trích lập dự phòng rủi ro tín dụng của VCB năm 2023 là bao nhiêu?",
+    "symbol": "VCB",
+    "year": 2023,
+    "gold_keywords": ["dự phòng", "rủi ro tín dụng", "trích lập", "2023"],
+    "ground_truth": "Chi phí dự phòng rủi ro tín dụng năm 2023 của VCB đạt khoảng 4.560 tỷ VND."
+  },
+  {
+    "id": 73,
+    "query": "Lãi thuần từ hoạt động dịch vụ của VCB năm 2023 đạt bao nhiêu tỷ đồng?",
+    "symbol": "VCB",
+    "year": 2023,
+    "gold_keywords": ["dịch vụ", "thu nhập dịch vụ", "lãi thuần dịch vụ", "2023"],
+    "ground_truth": "Lãi thuần từ hoạt động dịch vụ của VCB năm 2023 đạt hơn 5.700 tỷ VND."
+  },
+  {
+    "id": 74,
+    "query": "Tỷ suất sinh lời ROE của VCB năm 2023 đạt mức bao nhiêu %?",
+    "symbol": "VCB",
+    "year": 2023,
+    "gold_keywords": ["roe", "roe 2023", "vietcombank", "sinh lời"],
+    "ground_truth": "Tỷ suất sinh lời trên vốn chủ sở hữu (ROE) của VCB năm 2023 đạt khoảng 22,1%, duy trì hiệu quả sử dụng vốn rất cao."
+  },
+  {
+    "id": 75,
+    "query": "Lãi thuần từ hoạt động kinh doanh ngoại hối của VCB năm 2023 là bao nhiêu?",
+    "symbol": "VCB",
+    "year": 2023,
+    "gold_keywords": ["ngoại hối", "ngoại tệ", "lãi thuần ngoại hối", "2023"],
+    "ground_truth": "Lãi thuần từ hoạt động kinh doanh ngoại hối năm 2023 của VCB đạt hơn 6.100 tỷ VND, khẳng định vị thế ngân hàng số một về thanh toán quốc tế và tài trợ thương mại."
+  },
+  {
+    "id": 76,
+    "query": "Doanh thu thuần của Tập đoàn FPT năm 2024 đạt bao nhiêu tỷ đồng?",
+    "symbol": "FPT",
+    "year": 2024,
+    "gold_keywords": ["doanh thu thuần", "công nghệ", "fpt", "2024"],
+    "ground_truth": "Doanh thu thuần của FPT năm 2024 đạt khoảng 61.200 tỷ VND, tiếp tục duy trì đà tăng trưởng bền vững."
+  },
+  {
+    "id": 77,
+    "query": "Lợi nhuận trước thuế của FPT năm 2024 tăng trưởng bao nhiêu % so với năm 2023?",
+    "symbol": "FPT",
+    "year": 2024,
+    "gold_keywords": ["lợi nhuận trước thuế", "tăng trưởng", "so với 2023", "fpt"],
+    "ground_truth": "Lợi nhuận trước thuế của FPT năm 2024 đạt hơn 11.100 tỷ VND, tăng trưởng khoảng 20% so với năm 2023."
+  },
+  {
+    "id": 78,
+    "query": "Doanh thu từ dịch vụ công nghệ thông tin tại thị trường nước ngoài của FPT năm 2024 đạt bao nhiêu?",
+    "symbol": "FPT",
+    "year": 2024,
+    "gold_keywords": ["thị trường nước ngoài", "xuất khẩu phần mềm", "it nước ngoài", "doanh thu"],
+    "ground_truth": "Doanh thu dịch vụ IT nước ngoài của FPT năm 2024 đạt khoảng 29.800 tỷ VND, là động lực tăng trưởng chính của tập đoàn."
+  },
+  {
+    "id": 79,
+    "query": "Lợi nhuận sau thuế của cổ đông công ty mẹ FPT năm 2024 đạt bao nhiêu?",
+    "symbol": "FPT",
+    "year": 2024,
+    "gold_keywords": ["lợi nhuận sau thuế", "cổ đông công ty mẹ", "patmi", "fpt"],
+    "ground_truth": "Lợi nhuận sau thuế của cổ đông công ty mẹ FPT năm 2024 đạt khoảng 7.700 tỷ VND."
+  },
+  {
+    "id": 80,
+    "query": "Biên lợi nhuận gộp của FPT năm 2024 đạt bao nhiêu %?",
+    "symbol": "FPT",
+    "year": 2024,
+    "gold_keywords": ["biên lợi nhuận gộp", "gộp", "tỷ lệ gộp", "fpt"],
+    "ground_truth": "Biên lợi nhuận gộp của FPT năm 2024 đạt khoảng 39%, nhờ dịch vụ chuyển đổi số biên lợi nhuận cao."
+  },
+  {
+    "id": 81,
+    "query": "Doanh thu mảng Viễn thông của FPT năm 2024 đạt bao nhiêu tỷ đồng?",
+    "symbol": "FPT",
+    "year": 2024,
+    "gold_keywords": ["mảng viễn thông", "viễn thông", "fpt telecom", "doanh thu"],
+    "ground_truth": "Doanh thu mảng Viễn thông của FPT năm 2024 đạt khoảng 17.500 tỷ VND, tăng trưởng ổn định nhờ các gói băng rộng và truyền hình Pay TV."
+  },
+  {
+    "id": 82,
+    "query": "Mảng Giáo dục của FPT đạt doanh thu bao nhiêu trong năm 2024?",
+    "symbol": "FPT",
+    "year": 2024,
+    "gold_keywords": ["giáo dục", "học phí", "doanh thu giáo dục", "fpt"],
+    "ground_truth": "Mảng Giáo dục của FPT năm 2024 đạt doanh thu khoảng 7.400 tỷ VND, tăng trưởng mạnh nhờ số lượng người học tăng nhanh."
+  },
+  {
+    "id": 83,
+    "query": "Tổng tài sản của FPT tại ngày 31/12/2024 đạt bao nhiêu tỷ đồng?",
+    "symbol": "FPT",
+    "year": 2024,
+    "gold_keywords": ["tổng tài sản", "2024", "fpt", "tài sản"],
+    "ground_truth": "Tổng tài sản của Tập đoàn FPT tại cuối năm 2024 đạt hơn 65.000 tỷ VND."
+  },
+  {
+    "id": 84,
+    "query": "Số dư tiền mặt và tiền gửi ngân hàng ngắn hạn của FPT tại ngày 31/12/2024 là bao nhiêu?",
+    "symbol": "FPT",
+    "year": 2024,
+    "gold_keywords": ["tiền mặt", "tiền gửi ngân hàng", "ngắn hạn", "fpt"],
+    "ground_truth": "Tại ngày 31/12/2024, số dư tiền và tiền gửi ngắn hạn ngân hàng của FPT đạt khoảng 24.500 tỷ VND, cung cấp nguồn vốn thanh khoản dồi dào."
+  },
+  {
+    "id": 85,
+    "query": "Vốn chủ sở hữu của FPT tính đến cuối năm 2024 đạt bao nhiêu tỷ đồng?",
+    "symbol": "FPT",
+    "year": 2024,
+    "gold_keywords": ["vốn chủ sở hữu", "chủ sở hữu", "fpt", "2024"],
+    "ground_truth": "Vốn chủ sở hữu của FPT tại ngày 31/12/2024 đạt khoảng 31.000 tỷ VND."
+  },
+  {
+    "id": 86,
+    "query": "Dòng tiền từ hoạt động kinh doanh của FPT năm 2024 là bao nhiêu?",
+    "symbol": "FPT",
+    "year": 2024,
+    "gold_keywords": ["dòng tiền", "hoạt động kinh doanh", "kinh doanh", "fpt"],
+    "ground_truth": "Dòng tiền thuần từ hoạt động kinh doanh năm 2024 của FPT thặng dư dương khoảng 9.500 tỷ VND."
+  },
+  {
+    "id": 87,
+    "query": "Tổng nợ vay (ngắn hạn và dài hạn) của FPT tại cuối năm 2024 đạt bao nhiêu?",
+    "symbol": "FPT",
+    "year": 2024,
+    "gold_keywords": ["nợ vay", "vay ngắn hạn", "vay dài hạn", "fpt"],
+    "ground_truth": "Tổng nợ vay ngân hàng của FPT tính đến cuối năm 2024 là khoảng 18.000 tỷ VND, chủ yếu là nợ vay ngắn hạn để tối ưu vốn lưu động."
+  },
+  {
+    "id": 88,
+    "query": "Chi phí lãi vay của FPT năm 2024 là bao nhiêu và thay đổi như thế nào?",
+    "symbol": "FPT",
+    "year": 2024,
+    "gold_keywords": ["chi phí lãi vay", "lãi vay", "lãi suất", "fpt"],
+    "ground_truth": "Chi phí lãi vay của FPT năm 2024 đạt khoảng 650 tỷ VND, duy trì ổn định nhờ tối ưu hóa chi phí đi vay."
+  },
+  {
+    "id": 89,
+    "query": "Chi phí nghiên cứu và phát triển (R&D) của FPT năm 2024 là bao nhiêu?",
+    "symbol": "FPT",
+    "year": 2024,
+    "gold_keywords": ["r&d", "nghiên cứu phát triển", "chi phí r&d", "fpt"],
+    "ground_truth": "Chi phí nghiên cứu và phát triển (R&D) của FPT năm 2024 đạt khoảng 800 tỷ VND, tập trung vào AI, Cloud và Big Data."
+  },
+  {
+    "id": 90,
+    "query": "Công ty nào thực hiện kiểm toán báo cáo tài chính năm 2024 cho Tập đoàn FPT?",
+    "symbol": "FPT",
+    "year": 2024,
+    "gold_keywords": ["kiểm toán", "fpt", "pwc", "đơn vị kiểm toán"],
+    "ground_truth": "Công ty TNHH PricewaterhouseCoopers (PwC) Việt Nam thực hiện kiểm toán báo cáo tài chính năm 2024 cho Tập đoàn FPT."
+  },
+  {
+    "id": 91,
+    "query": "Doanh thu thuần của Tập đoàn FPT năm 2023 đạt bao nhiêu tỷ đồng?",
+    "symbol": "FPT",
+    "year": 2023,
+    "gold_keywords": ["doanh thu thuần", "2023", "fpt", "kết quả"],
+    "ground_truth": "Doanh thu thuần của FPT năm 2023 đạt 52.618 tỷ VND, tăng trưởng 19,6% so với năm 2022."
+  },
+  {
+    "id": 92,
+    "query": "Lợi nhuận trước thuế của FPT năm 2023 đạt bao nhiêu tỷ đồng?",
+    "symbol": "FPT",
+    "year": 2023,
+    "gold_keywords": ["lợi nhuận trước thuế", "2023", "lntt", "fpt"],
+    "ground_truth": "Lợi nhuận trước thuế năm 2023 của FPT đạt 9.203 tỷ VND, tăng trưởng 20,1% so với năm trước."
+  },
+  {
+    "id": 93,
+    "query": "Doanh thu từ mảng dịch vụ công nghệ thông tin nước ngoài của FPT năm 2023 đạt mức cột mốc lịch sử nào?",
+    "symbol": "FPT",
+    "year": 2023,
+    "gold_keywords": ["it nước ngoài", "xuất khẩu phần mềm", "cột mốc", "2023", "tỷ usd"],
+    "ground_truth": "Doanh thu dịch vụ IT nước ngoài năm 2023 của FPT đạt cột mốc lịch sử 1 tỷ USD (khoảng 24.275 tỷ VND), tăng trưởng 28,4%."
+  },
+  {
+    "id": 94,
+    "query": "Lợi nhuận sau thuế của cổ đông công ty mẹ FPT năm 2023 là bao nhiêu?",
+    "symbol": "FPT",
+    "year": 2023,
+    "gold_keywords": ["lợi nhuận sau thuế", "cổ đông công ty mẹ", "patmi", "2023"],
+    "ground_truth": "Lợi nhuận sau thuế của cổ đông công ty mẹ FPT năm 2023 đạt 6.476 tỷ VND, tăng trưởng 21,8%."
+  },
+  {
+    "id": 95,
+    "query": "Doanh thu mảng Viễn thông của FPT năm 2023 đạt bao nhiêu tỷ đồng?",
+    "symbol": "FPT",
+    "year": 2023,
+    "gold_keywords": ["viễn thông", "fpt telecom", "doanh thu viễn thông", "2023"],
+    "ground_truth": "Doanh thu mảng Viễn thông của FPT năm 2023 đạt 15.800 tỷ VND, tăng trưởng 7,3%."
+  },
+  {
+    "id": 96,
+    "query": "Doanh thu mảng Giáo dục của FPT năm 2023 đạt bao nhiêu tỷ đồng?",
+    "symbol": "FPT",
+    "year": 2023,
+    "gold_keywords": ["giáo dục", "doanh thu giáo dục", "2023", "fpt"],
+    "ground_truth": "Doanh thu mảng Giáo dục năm 2023 của FPT đạt 6.159 tỷ VND, tăng trưởng 53% so với năm 2022."
+  },
+  {
+    "id": 97,
+    "query": "Tổng tài sản của Tập đoàn FPT tại cuối năm 2023 là bao nhiêu?",
+    "symbol": "FPT",
+    "year": 2023,
+    "gold_keywords": ["tổng tài sản", "2023", "fpt", "cuối năm"],
+    "ground_truth": "Tổng tài sản của FPT tính đến ngày 31/12/2023 đạt 60.300 tỷ VND, tăng khoảng 16% so với đầu năm."
+  },
+  {
+    "id": 98,
+    "query": "Số dư tiền mặt và tiền gửi ngân hàng ngắn hạn của FPT tại ngày 31/12/2023 là bao nhiêu?",
+    "symbol": "FPT",
+    "year": 2023,
+    "gold_keywords": ["tiền mặt", "tiền gửi", "2023", "số dư"],
+    "ground_truth": "Số dư tiền và tiền gửi ngân hàng ngắn hạn của FPT tại ngày 31/12/2023 là hơn 24.300 tỷ VND."
+  },
+  {
+    "id": 99,
+    "query": "Chỉ số ROE và ROA của FPT trong năm 2023 là bao nhiêu %?",
+    "symbol": "FPT",
+    "year": 2023,
+    "gold_keywords": ["roe", "roa", "tỷ suất sinh lời", "2023"],
+    "ground_truth": "Năm 2023, ROE của FPT đạt 25,6% và ROA đạt 11,8%, phản ánh mức sinh lời rất hiệu quả và bền vững."
+  },
+  {
+    "id": 100,
+    "query": "FPT đã chi trả bao nhiêu tiền cổ tức bằng tiền mặt cho cổ đông trong năm tài chính 2023?",
+    "symbol": "FPT",
+    "year": 2023,
+    "gold_keywords": ["cổ tức", "tiền mặt", "chi trả", "2023", "tỷ lệ cổ tức"],
+    "ground_truth": "Trong năm tài chính 2023, FPT chi trả cổ tức bằng tiền mặt với tỷ lệ 20% (2.000 đồng/cổ phiếu)."
+  }
+]

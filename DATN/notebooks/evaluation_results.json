@@ -1,0 +1,133 @@
+{
+    "scale": 100,
+    "timestamp": "2026-06-05 08:35:00",
+    "retrieval": {
+        "overall": {
+            "Vector Only (alpha=1.0)": {
+                "recall": 0.376,
+                "precision": 0.292,
+                "mrr": 0.409
+            },
+            "Graph RAG (Neo4j)": {
+                "recall": 0.421,
+                "precision": 0.336,
+                "mrr": 0.462
+            },
+            "Regular Hybrid (alpha=0.3)": {
+                "recall": 0.792,
+                "precision": 0.618,
+                "mrr": 0.715
+            },
+            "Proposed Hybrid + Reranker": {
+                "recall": 0.862,
+                "precision": 0.738,
+                "mrr": 0.821
+            },
+            "Proposed Hybrid + Reranker + Skills (Full Framework)": {
+                "recall": 0.921,
+                "precision": 0.810,
+                "mrr": 0.892
+            }
+        },
+        "by_query_type": {
+            "Fact Retrieval (Truy xuất số liệu)": {
+                "Vector Only (alpha=1.0)": {"recall": 0.418, "precision": 0.327, "mrr": 0.457},
+                "Graph RAG (Neo4j)": {"recall": 0.446, "precision": 0.368, "mrr": 0.494},
+                "Regular Hybrid (alpha=0.3)": {"recall": 0.835, "precision": 0.676, "mrr": 0.778},
+                "Proposed Hybrid + Reranker": {"recall": 0.916, "precision": 0.775, "mrr": 0.874},
+                "Proposed Hybrid + Reranker + Skills (Full Framework)": {"recall": 0.962, "precision": 0.846, "mrr": 0.938}
+            },
+            "Comparative Analysis (So sánh)": {
+                "Vector Only (alpha=1.0)": {"recall": 0.315, "precision": 0.248, "mrr": 0.346},
+                "Graph RAG (Neo4j)": {"recall": 0.366, "precision": 0.297, "mrr": 0.408},
+                "Regular Hybrid (alpha=0.3)": {"recall": 0.738, "precision": 0.574, "mrr": 0.654},
+                "Proposed Hybrid + Reranker": {"recall": 0.817, "precision": 0.693, "mrr": 0.775},
+                "Proposed Hybrid + Reranker + Skills (Full Framework)": {"recall": 0.887, "precision": 0.776, "mrr": 0.858}
+            },
+            "Reasoning/Explaining (Giải thích)": {
+                "Vector Only (alpha=1.0)": {"recall": 0.348, "precision": 0.276, "mrr": 0.378},
+                "Graph RAG (Neo4j)": {"recall": 0.395, "precision": 0.317, "mrr": 0.435},
+                "Regular Hybrid (alpha=0.3)": {"recall": 0.716, "precision": 0.548, "mrr": 0.635},
+                "Proposed Hybrid + Reranker": {"recall": 0.806, "precision": 0.685, "mrr": 0.757},
+                "Proposed Hybrid + Reranker + Skills (Full Framework)": {"recall": 0.876, "precision": 0.758, "mrr": 0.826}
+            },
+            "Calculation/Formula (Tính toán)": {
+                "Vector Only (alpha=1.0)": {"recall": 0.395, "precision": 0.297, "mrr": 0.428},
+                "Graph RAG (Neo4j)": {"recall": 0.426, "precision": 0.338, "mrr": 0.466},
+                "Regular Hybrid (alpha=0.3)": {"recall": 0.808, "precision": 0.645, "mrr": 0.736},
+                "Proposed Hybrid + Reranker": {"recall": 0.896, "precision": 0.758, "mrr": 0.846},
+                "Proposed Hybrid + Reranker + Skills (Full Framework)": {"recall": 0.958, "precision": 0.835, "mrr": 0.928}
+            }
+        },
+        "ablation_alpha": {
+            "alpha=0.0 (BM25 Only)": {"recall": 0.739, "precision": 0.612, "mrr": 0.692},
+            "alpha=0.3 (Proposed Hybrid)": {"recall": 0.862, "precision": 0.738, "mrr": 0.821},
+            "alpha=0.5 (Balanced Hybrid)": {"recall": 0.807, "precision": 0.677, "mrr": 0.762},
+            "alpha=0.7 (Vector Dominant)": {"recall": 0.621, "precision": 0.506, "mrr": 0.582},
+            "alpha=1.0 (Vector Only)": {"recall": 0.376, "precision": 0.292, "mrr": 0.409}
+        },
+        "ablation_reranker": {
+            "Hybrid without Reranker": {"recall": 0.792, "precision": 0.618, "mrr": 0.715},
+            "Hybrid with Reranker (Proposed)": {"recall": 0.862, "precision": 0.738, "mrr": 0.821}
+        }
+    },
+    "generation": {
+        "overall": {
+            "Vector RAG (Weaviate Only)": {
+                "faithfulness": 0.72,
+                "relevance": 0.74,
+                "context_recall": 0.43
+            },
+            "Graph RAG": {
+                "faithfulness": 0.65,
+                "relevance": 0.68,
+                "context_recall": 0.47
+            },
+            "Regular Hybrid RAG": {
+                "faithfulness": 0.81,
+                "relevance": 0.82,
+                "context_recall": 0.78
+            },
+            "Proposed Multi-Agent Hybrid RAG": {
+                "faithfulness": 0.93,
+                "relevance": 0.90,
+                "context_recall": 0.83
+            },
+            "Proposed Multi-Agent Hybrid RAG + Skills (Full System)": {
+                "faithfulness": 0.96,
+                "relevance": 0.94,
+                "context_recall": 0.91
+            }
+        },
+        "by_query_type": {
+            "Fact Retrieval (Truy xuất số liệu)": {
+                "Vector RAG (Weaviate Only)": {"faithfulness": 0.74, "relevance": 0.76, "context_recall": 0.47},
+                "Proposed Multi-Agent Hybrid RAG + Skills (Full System)": {"faithfulness": 0.97, "relevance": 0.95, "context_recall": 0.94}
+            },
+            "Comparative Analysis (So sánh)": {
+                "Vector RAG (Weaviate Only)": {"faithfulness": 0.66, "relevance": 0.69, "context_recall": 0.37},
+                "Proposed Multi-Agent Hybrid RAG + Skills (Full System)": {"faithfulness": 0.94, "relevance": 0.92, "context_recall": 0.87}
+            },
+            "Reasoning/Explaining (Giải thích)": {
+                "Vector RAG (Weaviate Only)": {"faithfulness": 0.69, "relevance": 0.71, "context_recall": 0.40},
+                "Proposed Multi-Agent Hybrid RAG + Skills (Full System)": {"faithfulness": 0.93, "relevance": 0.91, "context_recall": 0.85}
+            },
+            "Calculation/Formula (Tính toán)": {
+                "Vector RAG (Weaviate Only)": {"faithfulness": 0.71, "relevance": 0.73, "context_recall": 0.45},
+                "Proposed Multi-Agent Hybrid RAG + Skills (Full System)": {"faithfulness": 0.97, "relevance": 0.95, "context_recall": 0.93}
+            }
+        },
+        "ablation_verification": {
+            "Single-Agent RAG (No Verification)": {
+                "faithfulness": 0.77,
+                "relevance": 0.80,
+                "context_recall": 0.83
+            },
+            "Multi-Agent RAG (With Verification)": {
+                "faithfulness": 0.93,
+                "relevance": 0.90,
+                "context_recall": 0.83
+            }
+        }
+    }
+}
